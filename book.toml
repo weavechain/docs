@@ -1,0 +1,16 @@
+[book]
+authors = ["Ioan Moldovan"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Weavechain"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+additional-css = ["./mdbook-admonish.css"]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
