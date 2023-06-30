@@ -9,6 +9,7 @@
 	- [Jupyter Server](./jupyter.md)
 - [Samples](./samples.md)
 	- [Hello World](./sample-hello.md)
+	- [My First Node](./sample-node.md)
 	- [Confidential Compute](./sample-compute.md)
 	- [Local Database](./sample-localdb.md)
 - [Architecture](./architecture.md)

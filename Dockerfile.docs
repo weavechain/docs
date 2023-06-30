@@ -1,4 +1,4 @@
-FROM nginx:1.21.6-alpine as builder
+FROM nginx:1.24.0-alpine as builder
 
 RUN apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/main libuv \
     && apk add --no-cache --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main nodejs npm \
@@ -26,6 +26,12 @@ COPY src /app/book/src
 
 RUN . ~/.cargo/env && mdbook-mermaid install /app/book/
 RUN . ~/.cargo/env && mdbook-admonish install /app/book/
+
+COPY weaveapi.js /app/book
+
+#COPY codemirror.min.js /app/book
+#COPY codemirror.min.css /app/book
+#COPY book.js /app/book
 
 WORKDIR /app
 
